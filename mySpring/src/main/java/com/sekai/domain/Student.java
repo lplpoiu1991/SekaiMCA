@@ -5,18 +5,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
 @Component("oneStudent")
 public class Student {
     @Value("刘世杰")
     String name;
 
 
-
     @Value("23")
     int age;
 
-    @Autowired
-            @Qualifier("oneSchool")
+    @Autowired(required = true)
+    @Qualifier("oneSchool")
     School school;
 
     public void setName(String name) {
@@ -30,6 +30,7 @@ public class Student {
     public void setSchool(School school) {
         this.school = school;
     }
+
     @Override
     public String toString() {
         return "Student{" +
