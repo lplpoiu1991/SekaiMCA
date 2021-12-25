@@ -1,3 +1,4 @@
 /Algorithm/out
 /helloSpring/target
-*/target/
+./*/target
+*/target

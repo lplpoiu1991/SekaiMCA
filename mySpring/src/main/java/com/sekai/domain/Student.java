@@ -2,6 +2,7 @@ package com.sekai.domain;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 @Component("oneStudent")
@@ -14,7 +15,8 @@ public class Student {
     @Value("23")
     int age;
 
-    @Autowired()
+    @Autowired
+            @Qualifier("oneSchool")
     School school;
 
     public void setName(String name) {

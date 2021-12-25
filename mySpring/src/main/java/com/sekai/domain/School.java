@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component("oneSchool")
 public class School {
 
-    @Value("北京大学")
+    @Value("北京大学师范")
     String schoolName;
 
     @Value("北京")
