@@ -3,6 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
     <bean id="someService" class="com.sekai.service.impl.SomeServiceImpl"></bean>
+
+    <bean id="someService2" class="com.sekai.service.impl.SomeServiceImpl"></bean>
+
+    <bean id="Student1" class="com.sekai.dao.Student">
+        <property name="age" value="20"></property>
+        <property name="name" value="liupeng"></property>
+
+
+    </bean>
 
 </beans>
