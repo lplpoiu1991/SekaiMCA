@@ -24,11 +24,22 @@ public class AppTest {
     }
 
     @Test
-    public void Test02(){
+    public void Test02() {
         ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
         SomeService proxy = (SomeService) ac.getBean("myService");
         System.out.println(proxy.getClass().getName());
-        proxy.doSome("sekai",30);
+        proxy.doSome("sekai", 30);
+
+    }
+
+    @Test
+    public void Test03() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
+        SomeService proxy = (SomeService) ac.getBean("myService");
+        //String str = proxy.doOther("sekai", 30);
+        com.sekai.Iservice.Student str = proxy.doOther2();
+        System.out.println("原方法结果" + str);
+
 
     }
 }

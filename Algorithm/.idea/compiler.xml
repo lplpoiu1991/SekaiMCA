@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mySpring" />
         <module name="helloSpring" />
+        <module name="SpringMyBatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="helloSpring" target="1.8" />
       <module name="mySpring" target="1.8" />
+      <module name="SpringMyBatis" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
